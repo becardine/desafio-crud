@@ -20,68 +20,122 @@
 
     <header>
         <nav class="nav flex-column nav-left">
-          <a class="nav-link icon-menu" aria-current="page" href="#"><img class="icon-menu-align-left"
-              src="src/img/icons/align-left.png" alt="Icon menu align left"></a>
-          <a class="nav-link" href="#"><img class="icon-menu-stats" src="src/img/icons/stats.png" alt="Icon menu stats">
-            <div class="bg-icon-menu-stats"></div>
-          </a>
-          <a class="nav-link" href="#"><img class="icon-menu-settings" src="src/img/icons/settings.png"
-              alt="Icon menu settings"></a>
-          <a class="nav-link" href="#"><img class="icon-menu-world" src="src/img/icons/world.png" alt="Icon menu world"></a>
-          <a class="nav-link" href="#"><img class="icon-menu-box-alt" src="src/img/icons/box-alt.png" alt="Icon menu box alt"></a>
-          <a class="nav-link" href="#"><img class="icon-menu-key" src="src/img/icons/key.png" alt="Icon menu key"></a>
+            <a class="nav-link icon-menu" aria-current="page" href="#"><img class="icon-menu-align-left"
+                    src="src/img/icons/align-left.png" alt="Icon menu align left"></a>
+            <a class="nav-link" href="#"><img class="icon-menu-stats" src="src/img/icons/stats.png"
+                    alt="Icon menu stats">
+                <div class="bg-icon-menu-stats"></div>
+            </a>
+            <a class="nav-link" href="#"><img class="icon-menu-settings" src="src/img/icons/settings.png"
+                    alt="Icon menu settings"></a>
+            <a class="nav-link" href="#"><img class="icon-menu-world" src="src/img/icons/world.png"
+                    alt="Icon menu world"></a>
+            <a class="nav-link" href="#"><img class="icon-menu-box-alt" src="src/img/icons/box-alt.png"
+                    alt="Icon menu box alt"></a>
+            <a class="nav-link" href="#"><img class="icon-menu-key" src="src/img/icons/key.png" alt="Icon menu key"></a>
         </nav>
-    
-        <nav class="navbar navbar-light container-top">
-          <div class="container-fluid d-flex justify-content-end">
-            <img class="img-logo" src="src/img/logo-dark-mode.png" alt="Logo">
-            <button id="switch" class="btn btn-dark-mode">Alterar Mode</button>
-            <img class="nav-top-bell" src="src/img/icons/sino.png" alt="Icon bell"><span class="bg-icon-nav-top-bell"></span>
-            <img class="nav-top-user" src="src/img/icons/do-utilizador.png" alt="Icon user"><span
-              class="bg-icon-nav-top-user"></span>
-            <img class="nav-top-vertical-dots" src="src/img/icons/menu-pontos-vertical.png" alt="Icon vertical dots">
-          </div>
-        </nav>
-      </header>
 
-      <main>
+        <nav class="navbar navbar-light container-top">
+            <div class="container-fluid d-flex justify-content-end">
+                <img class="img-logo" src="src/img/logo-dark-mode.png" alt="Logo">
+                <button id="switch" class="btn btn-dark-mode">Alterar Mode</button>
+                <img class="nav-top-bell" src="src/img/icons/sino.png" alt="Icon bell"><span
+                    class="bg-icon-nav-top-bell"></span>
+                <img class="nav-top-user" src="src/img/icons/do-utilizador.png" alt="Icon user"><span
+                    class="bg-icon-nav-top-user"></span>
+                <img class="nav-top-vertical-dots" src="src/img/icons/menu-pontos-vertical.png"
+                    alt="Icon vertical dots">
+            </div>
+        </nav>
+    </header>
+
+    <main>
         <div class="container container-list">
-          <div class="d-flex justify-content-between">
-            <p class="title-list-course mt-4">Lista dos Cursos</p>
-            <button class="btn btn-new-course" data-bs-toggle="modal" data-bs-target="#addModal">Novo Curso</button>
-          </div>
-    
-          <div class="container technology">
-            <a class="link-technology active" href="#">Frontend</a>
-            <a class="link-technology margin-link-tech" href="#">Backend</a>
-            <a class="link-technology margin-link-tech" href="#">DevOps</a>
-            <a class="link-technology margin-link-tech" href="#">Mobile</a>
-          </div>
-    
-          <section>
-            <table id="tableCourse" class="table table-responsive table-striped table-borderless table-course">
-              <thead>
-                <tr class="tr">
-                  <th scope="col">Curso</th>
-                  <th scope="col">Plataforma</th>
-                  <th scope="col">Duração</th>
-                  <th scope="col">Início</th>
-                  <th scope="col">Concluído</th>
-                </tr>
-              </thead>
-              <tbody>
-                  <!--Dados que vão ser carregados atraves do JS com localstorage-->
-              </tbody>
-            </table>
-          </section>
+            <div class="d-flex justify-content-between">
+                <p class="title-list-course mt-4">Lista dos Cursos</p>
+                <button class="btn btn-new-course" data-bs-toggle="modal" data-bs-target="#addModal">Novo Curso</button>
+            </div>
+
+            <div class="container technology">
+                <a class="link-technology active" href="#">Frontend</a>
+                <a class="link-technology margin-link-tech" href="#">Backend</a>
+                <a class="link-technology margin-link-tech" href="#">DevOps</a>
+                <a class="link-technology margin-link-tech" href="#">Mobile</a>
+            </div>
+
+            <section>
+                <table id="tableCourse" class="table table-responsive table-striped table-borderless table-course">
+                    <thead>
+                        <tr class="tr">
+                            <th scope="col">Curso</th>
+                            <th scope="col">Plataforma</th>
+                            <th scope="col">Duração</th>
+                            <th scope="col">Início</th>
+                            <th scope="col">Concluído</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--Dados que vão ser carregados atraves do JS com localstorage-->
+                    </tbody>
+                </table>
+            </section>
         </div>
-      </main>
+    </main>
+
+    <!--Modal adicionar curso-->
+    <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addModalLabel">Novo Curso</h5>
+                    <button id="clearModal" type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="form" action="">
+                        <div class="row">
+                            <div class="col mb-3">
+                                <input type="text" class="form-control" placeholder="Formação">
+                            </div>
+                            <div class="col">
+                                <input type="text" id="name" data-index="new" class="form-control" required
+                                    placeholder="Curso">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col mb-3">
+                                <input type="text" id="platform" class="form-control" required placeholder="Plataforma">
+                            </div>
+                            <div class="col">
+                                <input type="text" id="duration" class="form-control" required placeholder="Duração">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col mb-3">
+                                <input type="text" id="start" class="form-control" required placeholder="Início">
+                            </div>
+                            <div class="col">
+                                <input type="text" id="concluded" class="form-control" required placeholder="Concluído">
+                            </div>
+                        </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-delete-delete" data-bs-dismiss="modal">Cancelar</button>
+                    <button id="btn-save" type="button" class="btn btn-delete-cancel"
+                        data-bs-dismiss="modal">Salvar</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
 
 
     <!--Bootstrap JavaScript-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-  crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
