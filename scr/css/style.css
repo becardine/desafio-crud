@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap');
+
+
+/*Menu*/
+body {
+    overflow: hidden;
+    font-family: Poppins;
+    background: var(--body);
+}
+
+.container-top {
+    height: 5em;
+    position: relative;
+    top: 40px;
+    background: var(--menu-top);
+    box-shadow: -1px 1px 3px var(--box-shadow-top);
+}
+
+.img-logo {
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.nav-left {
+    background-color: var(--menu-left);
+    position: absolute;
+    width: 90px;
+    height: 1124px;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+}
+
+.icon-menu-align-left {
+    position: absolute;
+    width: 21px;
+    height: 28px;
+    left: 30px;
+    top: 69px;
+}
+
+.icon-menu-stats {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    left: 30px;
+    top: 161px;
+    z-index: 1;
+}
+
+.bg-icon-menu-stats {
+    position: absolute;
+    width: 53px;
+    height: 46px;
+    left: 16px;
+    top: 148px;
+
+    background: var(--bg-icon-menu-left);
+    box-shadow: -3px 5px 2px rgba(0, 0, 0, 0.51);
+    border-radius: 10px;
+}
+
+.icon-menu-settings {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    left: 30px;
+    top: 253px;
+
+}
+
+.icon-menu-world {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    left: 30px;
+    top: 326px;
+}
+
+.icon-menu-box-alt{
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    left: 30px;
+    top: 400px;
+}
+
+.icon-menu-key {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    left: 30px;
+    top: 472px;
+}
+
+.btn-dark-mode {
+    transform: translate(-50%);
+    background: #000000;
+    color: #FFFCFC;
+}
+
+.btn-dark-mode:hover {
+    background: #646363;
+    color: #000000;
+}
+
+.nav-top-bell {
+    width: 20px;
+    height: 20px;
+    margin-right: 48px;
+    z-index: 1;
+}
+
+.bg-icon-nav-top-bell {
+    width: 45px;
+    height: 45px;
+    background: rgba(196, 196, 196, 0.41);
+    border-radius: 50%;
+    transform: translate(-180%)
+}
+
+.nav-top-user {
+    width: 20px;
+    height: 20px;
+    transform: translate(-260%);
+    z-index: 1;
+}
+
+.bg-icon-nav-top-user {
+    width: 45px;
+    height: 45px;
+    background: rgba(196, 196, 196, 0.41);
+    border-radius: 50%;
+    transform: translate(-190%)
+}
+
+.nav-top-vertical-dots {
+    width: 20px;
+    height: 20px;
+    transform: translate(-350%)
+}
