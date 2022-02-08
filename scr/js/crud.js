@@ -32,6 +32,17 @@ const deleteCourse = (index) => {
 
 //Interação
 
+//Verifica se todos os campos que são obrigatorios estão preenchidos
+const isValidFields = () => {
+    return document.getElementsById('form').reportValidity()
+}
+
+//Limpar campos do formulario quando não salvar nada
+const clearFields = () => {
+    const fields = document.querySelectorAll('.form-control')
+    fields.forEach(field => field.value = "")
+}
+
 //Salvando curso
 const saveCourse = () => {
     if (isValidFields) {
@@ -63,8 +74,8 @@ const createRow = (course, index) => {
               <td>${course.duration}</td>
               <td>${course.start}</td>
               <td>${course.concluded}</td>
-              <td><button type="button" data-bs-toggle="modal" data-bs-target="#addModal" class="btn btn-edit" data-action="edit-${index}"><img class="img-edit" src="\\icons\\pencil.png" alt="Icon pencil"></button></td>
-              <td><button type="button" class="btn btn-delete" data-action="delete-${index}"><img class="img-delete" src="\\icons\\trash.png" alt="Icon trash"></button></td>
+              <td><button type="button" data-bs-toggle="modal" data-bs-target="#addModal" class="btn btn-edit" data-action="edit-${index}"><img class="img-edit" src="src\\img\\icons\\pencil.png" alt="Icon pencil"></button></td>
+              <td><button type="button" class="btn btn-delete" data-action="delete-${index}"><img class="img-delete" src="src\\img\\icons\\trash.png" alt="Icon trash"></button></td>
     `  
     document.querySelector('#tableCourse>tbody').appendChild(newRow)
 }
