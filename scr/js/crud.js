@@ -10,3 +10,6 @@ const createCourse = (course) => {
     dbCourse.push(course)
     setLocalStorage(dbCourse)
 }
+
+//read
+const readCourse = () => getLocalStorage()
