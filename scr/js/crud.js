@@ -13,3 +13,10 @@ const createCourse = (course) => {
 
 //read
 const readCourse = () => getLocalStorage()
+
+//update
+const updateCourse = (index, course) => {
+    const dbCourse = readCourse()
+    dbCourse[index] = course
+    setLocalStorage(dbCourse)
+}
