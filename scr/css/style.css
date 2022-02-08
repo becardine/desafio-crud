@@ -26,28 +26,11 @@
     --link-btn-new-course: #e29117;
 }
 
-/*Menu*/
+/*Menu left*/
 body {
     overflow: hidden;
     font-family: Poppins;
     background: var(--body);
-}
-
-.container-top {
-    height: 5em;
-    position: relative;
-    top: 40px;
-    background: var(--menu-top);
-    box-shadow: -1px 1px 3px var(--box-shadow-top);
-}
-
-.img-logo {
-    height: 30px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
 }
 
 .nav-left {
@@ -122,6 +105,23 @@ body {
     top: 472px;
 }
 
+
+/*Menu top*/
+.container-top {
+    height: 5em;
+    position: relative;
+    background: var(--menu-top);
+    box-shadow: -1px 1px 3px var(--box-shadow-top);
+}
+
+.img-logo {
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
 .btn-dark-mode {
     transform: translate(-50%);
     background: #000000;
