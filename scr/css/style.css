@@ -1,7 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap');
 
+:root {
+    --menu-top: #FFFCFC;
+    --box-shadow-top: #00000040;
+    --body: #fff;
+    --menu-left: #0a2342;
+    --bg-icon-menu-left: #53A676;
+    --bg-container-list: #FFFCFC;
+    --btn-new-course: #53A676;
+    --text-btn-new-course: #fff;
+    --link-btn-new-course: #53A676;
+}
+
+.dark-mode:root {
+    --menu-top: #212529;
+    --box-shadow-top: rgba(247, 247, 247, 0.795);
+    --body: #8a8b8b;
+    --menu-left: #212529;
+    --bg-icon-menu-left: #867e7e;
+    --bg-container-list: #ddd;
+    --cor-apoio: #afaeae;
+    --btn-new-course: #e29117;
+    --text-btn-new-course: #212529;
+    --link-btn-new-course: #e29117;
+}
 
 /*Menu*/
 body {
