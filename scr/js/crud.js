@@ -52,3 +52,30 @@ const saveCourse = () => {
         }
     }
 }
+
+//Preenchendo dados na tabela
+
+const createRow = (course, index) => {
+    const newRow = document.createElement('tr')
+    newRow.innerHTML = `
+              <td>${course.name}</td>
+              <td>${course.platform}</td>
+              <td>${course.duration}</td>
+              <td>${course.start}</td>
+              <td>${course.concluded}</td>
+              <td><button type="button" data-bs-toggle="modal" data-bs-target="#addModal" class="btn btn-edit" data-action="edit-${index}"><img class="img-edit" src="\\icons\\pencil.png" alt="Icon pencil"></button></td>
+              <td><button type="button" class="btn btn-delete" data-action="delete-${index}"><img class="img-delete" src="\\icons\\trash.png" alt="Icon trash"></button></td>
+    `  
+    document.querySelector('#tableCourse>tbody').appendChild(newRow)
+}
+
+const clearTable = () => {
+    const rows = document.querySelectorAll('#tableCourse>tbody tr')
+    rows.forEach(row => row.parentNode.removeChild(row))
+}
+
+const updateTable = () => {
+    const dbCourse = readCourse()
+    clearTable()
+    dbCourse.forEach(createRow)
+}
