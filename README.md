@@ -4,7 +4,7 @@ Atráves de uma mentoria, foi passado o desafio de criar uma lista onde é poss�
 
 Criei um layout onde seria um dev colocando seus cursos com campos de Nome, Plataforma, Duração, Início e se foi Concluído.
 
-<img src="src/img/screenshot-tela.png" alt="Tela Inicial">
+<img src="src/img/screenshot-tela.png" alt="Tela inicial">
 
 ## 🚀 Começando
 
