@@ -79,3 +79,40 @@ const updateTable = () => {
     clearTable()
     dbCourse.forEach(createRow)
 }
+
+//Preenche os campos ao clicar em editar
+const fillFields = (course) => {
+    document.getElementById('name').value = course.name
+    document.getElementById('platform').value = course.platform
+    document.getElementById('duration').value = course.duration
+    document.getElementById('start').value = course.start
+    document.getElementById('concluded').value = course.concluded
+    document.getElementById('name').dataset.index = course.index
+}
+
+const editCourse = (index) => {
+    const course = readCourse()[index]
+    course.index = index
+    fillFields(course)
+    
+}
+
+const editDelete = (event) => {
+    if (event.target.type == 'button'){
+        const [action, index] = event.target.dataset.action.split('-')
+
+        if (action == 'edit') {
+            editCourse(index)
+            updateTable()
+        } else {
+            const course = readCourse()[index]
+            const response = confirm(`Tem certeza que deseja excluir o curso ${course.name}?`)
+            if (response) {
+                deleteCourse(index)
+                updateTable()
+            }
+        }
+    }
+}
+
+updateTable()
