@@ -116,3 +116,13 @@ const editDelete = (event) => {
 }
 
 updateTable()
+
+//Eventos
+document.getElementById('btn-save')
+    .addEventListener('click', saveCourse)
+
+document.getElementById('clearModal')
+    .addEventListener('click', clearModal)
+
+document.querySelector('#tableCourse>tbody')
+    .addEventListener('click', editDelete)
