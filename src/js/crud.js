@@ -1,17 +1,19 @@
+const clearModal = () => clearFields()
+
+//Cria banco de dados no localStorage
 const getLocalStorage = () => JSON.parse(localStorage.getItem('db_course')) ?? []
 const setLocalStorage = (dbCourse) => localStorage.setItem("db_course", JSON.stringify(dbCourse))
 
+//crud
 
-//CRUD 
-
-//creat
+//create
 const createCourse = (course) => {
     const dbCourse = getLocalStorage()
     dbCourse.push(course)
     setLocalStorage(dbCourse)
 }
 
-//read
+//read 
 const readCourse = () => getLocalStorage()
 
 //update
@@ -28,10 +30,6 @@ const deleteCourse = (index) => {
     setLocalStorage(dbCourse)
 }
 
-//fim crud
-
-//Interação
-
 //Verifica se todos os campos que são obrigatorios estão preenchidos
 const isValidFields = () => {
     return document.getElementsById('form').reportValidity()
@@ -43,7 +41,8 @@ const clearFields = () => {
     fields.forEach(field => field.value = "")
 }
 
-//Salvando curso
+//Interação
+
 const saveCourse = () => {
     if (isValidFields) {
         const course = {
@@ -52,7 +51,7 @@ const saveCourse = () => {
             duration: document.getElementById('duration').value,
             start: document.getElementById('start').value,
             concluded: document.getElementById('concluded').value
-        }
+        } 
         const index = document.getElementById('name').dataset.index
         if (index == 'new') {
             createCourse(course)
@@ -61,7 +60,8 @@ const saveCourse = () => {
             updateCourse(index, course)
             updateTable()
         }
-    }
+            
+        }
 }
 
 //Preenchendo dados na tabela
@@ -91,7 +91,7 @@ const updateTable = () => {
     dbCourse.forEach(createRow)
 }
 
-//Preenche os campos ao clicar em editar
+//Editar dados
 const fillFields = (course) => {
     document.getElementById('name').value = course.name
     document.getElementById('platform').value = course.platform
@@ -137,3 +137,4 @@ document.getElementById('clearModal')
 
 document.querySelector('#tableCourse>tbody')
     .addEventListener('click', editDelete)
+
