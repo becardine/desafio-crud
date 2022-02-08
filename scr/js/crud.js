@@ -20,3 +20,10 @@ const updateCourse = (index, course) => {
     dbCourse[index] = course
     setLocalStorage(dbCourse)
 }
+
+//delete
+const deleteCourse = (index) => {
+    const dbCourse = readCourse()
+    dbCourse.splice(index, 1)
+    setLocalStorage(dbCourse)
+}
