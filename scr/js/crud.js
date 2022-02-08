@@ -27,3 +27,28 @@ const deleteCourse = (index) => {
     dbCourse.splice(index, 1)
     setLocalStorage(dbCourse)
 }
+
+//fim crud
+
+//Interação
+
+//Salvando curso
+const saveCourse = () => {
+    if (isValidFields) {
+        const course = {
+            name: document.getElementById('name').value,
+            platform: document.getElementById('platform').value,
+            duration: document.getElementById('duration').value,
+            start: document.getElementById('start').value,
+            concluded: document.getElementById('concluded').value
+        }
+        const index = document.getElementById('name').dataset.index
+        if (index == 'new') {
+            createCourse(course)
+            updateTable()
+        } else {
+            updateCourse(index, course)
+            updateTable()
+        }
+    }
+}
