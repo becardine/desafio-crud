@@ -44,6 +44,39 @@
         </nav>
       </header>
 
+      <main>
+        <div class="container container-list">
+          <div class="d-flex justify-content-between">
+            <p class="title-list-course mt-4">Lista dos Cursos</p>
+            <button class="btn btn-new-course" data-bs-toggle="modal" data-bs-target="#addModal">Novo Curso</button>
+          </div>
+    
+          <div class="container technology">
+            <a class="link-technology active" href="#">Frontend</a>
+            <a class="link-technology margin-link-tech" href="#">Backend</a>
+            <a class="link-technology margin-link-tech" href="#">DevOps</a>
+            <a class="link-technology margin-link-tech" href="#">Mobile</a>
+          </div>
+    
+          <section>
+            <table id="tableCourse" class="table table-responsive table-striped table-borderless table-course">
+              <thead>
+                <tr class="tr">
+                  <th scope="col">Curso</th>
+                  <th scope="col">Plataforma</th>
+                  <th scope="col">Duração</th>
+                  <th scope="col">Início</th>
+                  <th scope="col">Concluído</th>
+                </tr>
+              </thead>
+              <tbody>
+                  <!--Dados que vão ser carregados atraves do JS com localstorage-->
+              </tbody>
+            </table>
+          </section>
+        </div>
+      </main>
+
 
 
     <!--Bootstrap JavaScript-->
