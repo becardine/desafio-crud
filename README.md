@@ -13,7 +13,7 @@ Desafio com prazo de entrega de 1 semana.
 
 ### 🔧 Instruções do desafio 
 
-- Implementar uma lista de itens carregados de uma API
+- Implementar uma lista de itens
 - CSS a partir de alguma biblioteca
 - Melhora de layout
 - Commits com verbos infinitivos 
